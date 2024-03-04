@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Website Title -->
+    <title>Sky Forum</title>
+    <!-- Website Icon -->
+    <link rel="Website Icon" href="./images/web icon.png">
+    <!-- Fontawesome CDN Link -->
+    <script src="https://kit.fontawesome.com/2c7411e5f0.js" crossorigin="anonymous"></script>
+    <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <!-- Daisy UI CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CSS CDN link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!---- Custom CSS ---->
+    <link rel="stylesheet" href="styles/style.css">
+    <!---- Custom Tailwind Variables ---->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-color': '#797DFC',
+                        'dark1': '#12132D',
+                        'dark2': '#12132DCC',
+                        'dark3': '#12132D99'
+                    },
+                    backgroundImage: {
+                        'hero': "url('./images/bgbanner.png')"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container mx-auto px-5">
+            <!-- Navbar Section -->
+            <nav class="w-full py-6 flex flex-col md:flex-row gap-2 justify-between items-center font-mulish">
+                <!-- Brand Logo -->
+                <div>
+                    <img class="h-10" src="./images/logo.png" alt="Logo">
+                    <!-- <h1 class="text-4xl font-semibold">RhM</h1> -->
+                </div>
+                <!-- Menubar Icons -->
+                <div class="flex gap-3 justify-center items-center flex-wrap">
+                    <div class="flex gap-3">
+                        <div class="tooltip" data-tip="Home">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full flex justify-center items-center border-2 border-gray-300 text-dark3 hover:bg-brand-color hover:text-white duration-300"><i
+                                    class="fa-solid fa-house"></i></a>
+                        </div>
+                        <div class="tooltip" data-tip="Tools">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full flex justify-center items-center border-2 border-gray-300 text-dark3 hover:bg-brand-color hover:text-white duration-300"><i
+                                    class="fa-solid fa-pencil"></i></a>
+                        </div>
+                        <div class="tooltip" data-tip="Connect User">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full flex justify-center items-center border-2 border-gray-300 text-dark3 hover:bg-brand-color hover:text-white duration-300"><i
+                                    class="fa-solid fa-user-plus"></i></a>
+                        </div>
+                        <div class="tooltip" data-tip="Countries">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full flex justify-center items-center border-2 border-gray-300 text-dark3 hover:bg-brand-color hover:text-white duration-300"><i
+                                    class="fa-solid fa-flag"></i></a>
+                        </div>
+                    </div>
+                    <!-- Menubar sign up button -->
+                    <div>
+                        <a href="#"
+                            class="w-28 h-10 rounded-full flex justify-center items-center border-2 border-transparent text-white font-semibold bg-brand-color hover:bg-blue-600 duration-300">Sign
+                            up</a>
+                    </div>
+                </div>
+            </nav>
+            <!-- Banner Section -->
+            <section>
+                <div
+                    class="w-full bg-brand-color p-10 lg:p-24 bg-hero rounded-xl bg-center bg-no-repeat bg-cover flex justify-between items-center gap-10 flex-col text-center md:flex-row md:text-left font-mulish">
+                    <!-- Banner text -->
+                    <div class="space-y-8">
+                        <h1 class="max-w-[500px] text-3xl md:text-4xl lg:text-6xl text-white font-black">Welcome to the
+                            <span class="text-brand-color">Sky</span> Forum
+                        </h1>
+                        <p class="max-w-[400px] text-lg text-white font-medium">Share your favorite opinion and win and
+                            wp forum coffee mug!</p>
+                        <!-- Banner search container -->
+                        <div>
+                            <div
+                                class="max-w-[400px] h-12 bg-white rounded-full pr-1 flex justify-between items-center">
+                                <input id="search-field"
+                                    class="h-full focus-visible:outline-none ps-5 rounded-l-full text-dard2 font-semibold"
+                                    type="text" placeholder="Search here anything">
+                                <button onclick="userSearch()"
+                                    class="h-[80%] bg-brand-color px-8 rounded-full text-white font-semibold hover:bg-blue-600 duration-300">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Banner counter data -->
+                    <div class="bg-white p-10 rounded-lg flex flex-col gap-5">
+                        <div class="flex justify-between gap-10">
+                            <h3 class="text-lg text-dark2 font-semibold text-nowrap">Registered Users</h3>
+                            <h3 class="text-lg text-dark2 font-semibold">156</h3>
+                        </div>
+                        <div class="flex justify-between gap-10">
+                            <h3 class="text-lg text-dark2 font-semibold">Forum</h3>
+                            <h3 class="text-lg text-dark2 font-semibold">650</h3>
+                        </div>
+                        <div class="flex justify-between gap-10">
+                            <h3 class="text-lg text-dark2 font-semibold">Topics</h3>
+                            <h3 class="text-lg text-dark2 font-semibold">20</h3>
+                        </div>
+                        <div class="flex justify-between gap-10">
+                            <h3 class="text-lg text-dark2 font-semibold">Replies</h3>
+                            <h3 class="text-lg text-dark2 font-semibold">890</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+    <main>
+        <div class="container mx-auto px-5">
+            <!-- Discuss Section -->
+            <section class="my-20">
+                <!-- Section title -->
+                <div>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center font-mulish">Let’s <span
+                            class="text-brand-color">Discuss</span></h2>
+                    <p class="max-w-[600px] text-center mx-auto mt-5 text-dark3 font-medium">A concise summary capturing
+                        the essence of the forum, its purpose, topics, and community, inviting participation and
+                        engagement.</p>
+                </div>
+
+                <!-- <div id="loader" class="w-full flex justify-center mt-16">
+                    <span class="loading loading-bars loading-lg mx-auto"></span>
+                </div> -->
+
+
+                <div class=" grid grid-cols-1 lg:grid-cols-2 mt-20 gap-5  ">
+                    <div id="post-container" class="space-y-3">
+
+                    </div>
+
+
+                    <div class="my-5" id="viewer">
+                        <div class="flex justify-between">
+                            <h3 class="font-bold text-xl text-dark1">Title</h3>
+                            <p class="text-base font-bold text-dark3"><span class="text-green-500"><i
+                                        class="fa-solid fa-circle-check"></i></span> Mark as read (<span
+                                    id="readCount">0</span>)</p>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </section>
+
+            <!-- Join section -->
+            <section class="my-20">
+                <div
+                    class="w-full bg-[#12132D] rounded-xl p-10 lg:p-20 flex justify-between items-center gap-20 flex-col md:flex-row text-center md:text-left">
+                    <div class="text-white">
+                        <h2 class="text-4xl font-bold">Join Our Forum</h2>
+                        <p class="max-w-[600px] text-base font-semibold my-7">Share your favorite opinion and win and wp
+                            forum coffee mug! Yes, you can run unit tests and view the results directly within the app.
+                        </p>
+                        <a href="#"
+                            class="px-10 py-4 rounded-full bg-brand-color hover:bg-blue-600 duration-300 font-bold inline-block mt-5 md:mt-12">
+                            Registered Now</a>
+                    </div>
+                    <div>
+                        <img src="./images/joinforum.png" alt="Join Forum Image">
+                    </div>
+                </div>
+            </section>
+            <!-- Letest post section -->
+            <section class="my-20">
+                <!-- Section title -->
+                <div>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center font-mulish">Latest <span
+                            class="text-brand-color">Posts</span></h2>
+                    <p class="max-w-[600px] text-center mx-auto mt-5 text-dark3 font-medium">A brief synopsis
+                        highlighting forum's focus, fostering interaction among members, and reflecting its inclusive
+                        and vibrant community atmosphere.</p>
+                </div>
+
+                <!-- Latest post card container -->
+
+                <div class="">
+                    <div id="latest_post_container" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-20">
+                
+                </div>
+
+                </div>
+
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="w-full p-10 bg-gray-100 pt-20">
+            <div class="container mx-auto px-5 text-center max-w-[600px] space-y-4">
+                <img class="h-12 mx-auto" src="./images/logo.png" alt="Footer logo">
+                <p>Stay engaged! Connect with us for updates, discussions, and community interaction. Join our network
+                    and be part of the conversation!</p>
+                <div class="space-x-5 text-xl">
+                    <a href="#" class="hover:text-brand-color duration-300"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:text-brand-color duration-300"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-brand-color duration-300"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-brand-color duration-300"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-color duration-300"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <hr class="mt-5 border border-gray-300 border-dashed">
+            <div class="text-center font-semibold mt-5">
+                <p>&copy; 2024, All Right Reserved By Sky Forum | Design by <a href="https://riead.netlify.app/"
+                        target="_blank"><span class="text-brand-color">RHM</span></a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/post1.js"></script>
+    
+</body>
+
+</html>
